@@ -1,0 +1,86 @@
+q1=input_data["q1"]
+q2=input_data["q2"]
+q3=input_data["q3"]
+q4=input_data["q4"]
+q5=input_data["q5"]
+q6=input_data["q6"]
+q7=input_data["q7"]
+q8=input_data["q8"]
+q9=input_data["q9"]
+q10=input_data["q10"]
+q11=input_data["q11"]
+q12=input_data["q12"]
+q13=input_data["q13"]
+q14=input_data["q14"]
+q15=input_data["q15"]
+q16=input_data["q16"]
+q17=input_data["q17"]
+q18=input_data["q18"]
+q19=input_data["q19"]
+q20=input_data["q20"]
+precontemplation=0
+contemplation=0
+preparation=0
+action=0
+maintenance=0
+reportOutput=()
+stage=()
+
+if q1=="Agree":
+    precontemplation=precontemplation+25
+if q2=="Agree":
+    contemplation=contemplation+25
+if q3=="Agree":
+    preparation=preparation+25
+if q4=="Agree":
+    action=action+25
+if q5=="Agree":
+    maintenance=maintenance+25
+if q6=="Agree":
+    precontemplation=precontemplation+25
+if q7=="Agree":
+    contemplation=contemplation+25
+if q8=="Agree":
+    preparation=preparation+25
+if q9=="Agree":
+    action=action+25
+if q10=="Agree":
+    maintenance=maintenance+25
+if q11=="Agree":
+    precontemplation=precontemplation+25
+if q12=="Agree":
+    contemplation=contemplation+25
+if q13=="Agree":
+    preparation=preparation+25
+if q14=="Agree":
+    action=action+25
+if q15=="Agree":
+    maintenance=maintenance+25
+if q16=="Agree":
+    precontemplation=precontemplation+25
+if q17=="Agree":
+    contemplation=contemplation+25
+if q18=="Agree":
+    preparation=preparation+25
+if q19=="Agree":
+    action=action+25
+if q20=="Agree":
+    maintenance=maintenance+25
+
+if maintenance>=precontemplation and maintenance>=contemplation and maintenance>=preparation and maintenance>=action:
+    stage=("Maintenance")
+    reportOutput=("In the maintenance stage, clients have successfully changed the behavior and accomplished their set goals, usually after six months. The new behavior is habitual and automatic and part of clients’ lifestyles. This can be a difficult stage, as clients can become complacent, and the onset of negative circumstances can influence their commitment and threaten the sustained, long-term effort if no maintenance strategy is developed.")
+elif action>=precontemplation and action>=contemplation and action>=preparation and action>=maintenance:
+    stage=("Action")
+    reportOutput=("In the action stage, change is visible and equated with progress. Alterations in awareness, thought processes, emotions, and self-image occur as clients exhibit diligence and put a lot of effort into the process. Most clients will experience setbacks and periodically resume the old behavior in this stage, which may halt the change process, make them feel demoralized over occasional “slips,” and sometimes result in the client giving up. These behaviors are a normal part of the action stage and are not seen as a failure or relapse.")
+elif preparation>=precontemplation and preparation>=contemplation and preparation>=action and preparation>=maintenance:
+    stage=("Preparation")
+    reportOutput=("In the preparation stage, clients will see change as important and view themselves capable of change. However, they will often make “yes, but” statements and put off taking steps toward change. They will usually find themselves planning and strategizing for change, experimenting with changing the desired behavior, seeking support, and identifying potential roadblocks and resources.")
+elif contemplation>=precontemplation and contemplation>=preparation and contemplation>=action and contemplation>=maintenance:
+    stage=("Contemplation")
+    reportOutput=("The contemplation stage is a period of instability. Clients are thinking about change. They are ambivalent while examining the benefits of and obstacles to change while looking for compelling reasons to change through a risk/reward analysis. Some clients will find themselves in this stage for prolonged periods, experiencing stress as they feel stuck. ")
+elif precontemplation>=contemplation and precontemplation>=preparation and precontemplation>=action and precontemplation>=maintenance:
+    stage=("Pre-contemplation")
+    reportOutput=("Our report suggets you are in the pre-contemplation stage, there are four possible reasons for this:<br>Reluctance: You maybe unwilling to consider change, comfortable as you are, averse to taking a risk or unaware of consequences<br>Rebellion: You maybe resistant to change as you you value you current independence<br>Resignation: You mey feel helpless and overwhelmed by problems and feel like a failure<br>Rationalizing: You maybe employing rationalization as a form of protection; unlike rebellion, this stance is more about thoughts than emotions")    
+
+output = [{'stage': stage, "reportOutput": reportOutput}]
